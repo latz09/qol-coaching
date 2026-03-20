@@ -1,5 +1,9 @@
 /* eslint-env browser */
 
+
+// ADD URL TO CMS GUIDE LINK
+const CMS_GUIDE_URL = 'https://qolc.latzwebdesign.com/cms-guide.html'
+
 import {forwardRef, useState} from 'react'
 import PropTypes from 'prop-types'
 
@@ -126,7 +130,7 @@ const CustomLayout = forwardRef((props, ref) => {
             </button>
 
             <a
-              href="/static/qolc-cms-guide.pdf"
+              href={CMS_GUIDE_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{

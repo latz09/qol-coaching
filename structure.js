@@ -1,6 +1,7 @@
 import {
   HomeIcon,
   InfoOutlineIcon,
+  BlockElementIcon,
   CogIcon,
   EnvelopeIcon,
   DocumentsIcon,
@@ -13,8 +14,8 @@ import {
 const singletonTypes = [
   'navigationSection',
   'heroSection',
-  'whatBringsYouHereSection',
-  'aboutCoachingSection',
+  'introductionSection',
+
   'coachingServicesSection',
   'biofieldTuningSection',
   'aboutElizabethSection',
@@ -38,34 +39,21 @@ export const structure = (S) =>
                 .title('Navigation')
                 .icon(CogIcon)
                 .child(
-                  S.document()
-                    .schemaType('navigationSection')
-                    .documentId('navigationSection'),
+                  S.document().schemaType('navigationSection').documentId('navigationSection'),
                 ),
               S.listItem()
                 .title('Hero')
                 .icon(HomeIcon)
-                .child(
-                  S.document()
-                    .schemaType('heroSection')
-                    .documentId('heroSection'),
-                ),
+                .child(S.document().schemaType('heroSection').documentId('heroSection')),
               S.listItem()
-                .title('What Brings You Here')
-                .icon(HelpCircleIcon)
+                .title('Introduction')
+                .icon(BlockElementIcon)
                 .child(
                   S.document()
-                    .schemaType('whatBringsYouHereSection')
-                    .documentId('whatBringsYouHereSection'),
+                    .schemaType('introductionSection')
+                    .documentId('introductionSection'),
                 ),
-              S.listItem()
-                .title('About QoL Coaching')
-                .icon(InfoOutlineIcon)
-                .child(
-                  S.document()
-                    .schemaType('aboutCoachingSection')
-                    .documentId('aboutCoachingSection'),
-                ),
+             
               S.listItem()
                 .title('Coaching Services & Booking')
                 .icon(DocumentsIcon)
@@ -93,27 +81,15 @@ export const structure = (S) =>
               S.listItem()
                 .title('FAQ')
                 .icon(HelpCircleIcon)
-                .child(
-                  S.document()
-                    .schemaType('faqSection')
-                    .documentId('faqSection'),
-                ),
+                .child(S.document().schemaType('faqSection').documentId('faqSection')),
               S.listItem()
                 .title('Contact Form')
                 .icon(EnvelopeIcon)
-                .child(
-                  S.document()
-                    .schemaType('contactSection')
-                    .documentId('contactSection'),
-                ),
+                .child(S.document().schemaType('contactSection').documentId('contactSection')),
               S.listItem()
                 .title('Footer')
                 .icon(BlockContentIcon)
-                .child(
-                  S.document()
-                    .schemaType('footerSection')
-                    .documentId('footerSection'),
-                ),
+                .child(S.document().schemaType('footerSection').documentId('footerSection')),
             ]),
         ),
       S.divider(),

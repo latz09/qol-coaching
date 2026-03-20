@@ -19,6 +19,9 @@ export default defineConfig({
   projectId: 'etke93qh',
   dataset: 'production',
   theme: theme,
+   releases: {
+    enabled: false,
+  },
   plugins: [
     structureTool({
       title: 'Edit Content',
